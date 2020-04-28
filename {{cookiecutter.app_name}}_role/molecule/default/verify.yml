@@ -1,0 +1,58 @@
+---
+# This is an example playbook to execute goss tests.
+# Tests need distributed to the appropriate ansible host/groups
+# prior to execution by `goss validate`.
+
+- name: Verify {{ cookiecutter.app_name | replace('_',' ') }}
+  hosts:
+    - {{ cookiecutter.app_name }}
+  become: true
+  vars:
+    goss_version: v0.3.10
+    goss_arch: amd64
+    goss_dst: /usr/local/bin/goss
+    goss_sha256sum: 150f25495ca0d1d4fd2ef8d0e750dbd767a15e9a522505f99b61dd1dd40a76d4
+    goss_url: "https://github.com/aelsabbahy/goss/releases/download/{% raw %}{{{% endraw %} goss_version {% raw %}}}{% endraw %}/goss-linux-{% raw %}{{{% endraw %} goss_arch {% raw %}}}{% endraw %}"
+    goss_test_directory: /tmp
+    goss_format: documentation
+
+  vars_files:
+    - ../../defaults/main.yml
+
+  tasks:
+    - name: Download and install Goss
+      get_url:
+        url: "{% raw %}{{{% endraw %} goss_url {% raw %}}}{% endraw %}"
+        dest: "{% raw %}{{{% endraw %} goss_dst {% raw %}}}{% endraw %}"
+        sha256sum: "{% raw %}{{{% endraw %} goss_sha256sum {% raw %}}}{% endraw %}"
+        mode: 0755
+      register: download_goss
+      until: download_goss is succeeded
+      retries: 3
+
+    - name: Copy Goss tests to remote
+      template:
+        src: "{% raw %}{{{% endraw %} item {% raw %}}}{% endraw %}"
+        dest: "{% raw %}{{{% endraw %} goss_test_directory {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} item | basename {% raw %}}}{% endraw %}"
+      with_fileglob:
+        - "tests/test_*.yml"
+
+    - name: Register test files
+      shell: "ls {% raw %}{{{% endraw %} goss_test_directory {% raw %}}}{% endraw %}/test_*.yml"
+      register: test_files
+
+    - name: Execute Goss tests
+      command: "{% raw %}{{{% endraw %} goss_dst {% raw %}}}{% endraw %} -g {% raw %}{{{% endraw %} item {% raw %}}}{% endraw %} validate --format {% raw %}{{{% endraw %} goss_format {% raw %}}}{% endraw %}"
+      register: test_results
+      with_items: "{% raw %}{{{% endraw %} test_files.stdout_lines {% raw %}}}{% endraw %}"
+
+    - name: Display details about the Goss results
+      debug:
+        msg: "{% raw %}{{{% endraw %} item.stdout_lines {% raw %}}}{% endraw %}"
+      with_items: "{% raw %}{{{% endraw %} test_results.results {% raw %}}}{% endraw %}"
+
+    - name: Fail when tests fail
+      fail:
+        msg: "Goss failed to validate"
+      when: item.rc != 0
+      with_items: "{% raw %}{{{% endraw %} test_results.results {% raw %}}}{% endraw %}"

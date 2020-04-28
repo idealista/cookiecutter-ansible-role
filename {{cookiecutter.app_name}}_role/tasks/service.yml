@@ -1,0 +1,17 @@
+---
+
+- name: {{ cookiecutter.app_name | upper }} | Copy Daemon script
+  template:
+    src: {{ cookiecutter.app_name }}.service.j2
+    dest: /etc/systemd/system/{{ cookiecutter.app_name }}.service
+    mode: 0644
+    owner: root
+    group: root
+  notify: restart {{ cookiecutter.app_name }}
+
+- name: {{ cookiecutter.app_name | upper }} | Configuring service
+  systemd:
+    name: {{ cookiecutter.app_name }}
+    state: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_service_state {% raw %}}}{% endraw %}"
+    enabled: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_service_enabled {% raw %}}}{% endraw %}"
+    daemon_reload: yes

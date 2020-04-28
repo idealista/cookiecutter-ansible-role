@@ -1,0 +1,4 @@
+ansible=={{ cookiecutter.ansible_version }}
+molecule=={{ cookiecutter.molecule_version }}
+docker=={{ cookiecutter.python_docker_version }}
+ansible-lint=={{ cookiecutter.ansible_lint_version }}

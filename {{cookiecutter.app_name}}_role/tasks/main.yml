@@ -1,0 +1,17 @@
+---
+
+- name: {{ cookiecutter.app_name | upper }} | Install
+  include: install.yml
+  tags:
+    - {{ cookiecutter.app_name }}_install
+
+- name: {{ cookiecutter.app_name | upper }} | Configure
+  include: config.yml
+  tags:
+    - {{ cookiecutter.app_name }}_configure
+{% if cookiecutter.has_service  == 'True' %}
+- name: {{ cookiecutter.app_name | upper }} | Service
+  include: service.yml
+  tags:
+    - {{ cookiecutter.app_name }}_service
+{% endif %}

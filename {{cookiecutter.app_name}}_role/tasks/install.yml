@@ -1,0 +1,74 @@
+---
+{% if cookiecutter.has_service  == 'True' %}
+- name: {{ cookiecutter.app_name | upper }} | Ensure {{ cookiecutter.app_name }} group
+  group:
+    name: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
+    system: yes
+    state: present
+
+- name: {{ cookiecutter.app_name | upper }} | Ensure {{ cookiecutter.app_name }} user
+  user:
+    name: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
+    group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
+    system: yes
+    shell: /usr/sbin/nologin
+    createhome: no
+{% endif %}
+- name: {{ cookiecutter.app_name | upper }} | Ensure skeleton paths
+  file:
+    dest: "{% raw %}{{{% endraw %} item {% raw %}}}{% endraw %}"
+{% if cookiecutter.has_service  == 'True' %}
+    owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
+    group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
+{% endif %}
+    state: directory
+  with_items:
+    - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_skeleton_paths {% raw %}}}{% endraw %}"
+
+- name: {{ cookiecutter.app_name | upper }} | Ensure skeleton log paths
+  file:
+    dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_path {% raw %}}}{% endraw %}"
+{% if cookiecutter.has_service  == 'True' %}
+    owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
+    group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
+{% endif %}
+    state: file
+  when: {{ cookiecutter.app_name }}_log_file is defined
+
+- name: {{ cookiecutter.app_name | upper }} | Check {{ cookiecutter.app_name }} version
+  command: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }} --version {% raw %}}}{% endraw %}"
+  register: {{ cookiecutter.app_name }}_check
+  changed_when: false
+  ignore_errors: true
+
+- name: {{ cookiecutter.app_name | upper }} | Download package
+  get_url:
+    url: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_url {% raw %}}}{% endraw %}"
+    dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package_path {% raw %}}}{% endraw %}"
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+
+- name: {{ cookiecutter.app_name | upper }} | Extract downloaded package
+  unarchive:
+    src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package_path {% raw %}}}{% endraw %}"
+    dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_download_path {% raw %}}}{% endraw %}"
+    remote_src: True
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version  not in {{ cookiecutter.app_name }}_check.stderr
+
+- name: {{ cookiecutter.app_name | upper }} | Copy binary
+  copy:
+    src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_src_bin {% raw %}}}{% endraw %}"
+    dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
+{% if cookiecutter.has_service  == 'True' %}
+    owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
+    group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
+{% endif %}
+    remote_src: True
+    mode: 0755
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+
+- name: {{ cookiecutter.app_name | upper }} | Link binary
+  file:
+    src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
+    dest: "/usr/bin/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
+    state: link
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr

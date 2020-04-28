@@ -1,0 +1,5 @@
+---
+- name: Converge
+  hosts: {{ cookiecutter.app_name }}_group
+  roles:
+    - role: {{ cookiecutter.app_name }}_role

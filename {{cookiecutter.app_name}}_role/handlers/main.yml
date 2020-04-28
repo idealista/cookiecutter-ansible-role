@@ -1,0 +1,8 @@
+---
+{% if cookiecutter.has_service == 'True' %}
+- name: restart {{ cookiecutter.app_name }}
+  systemd:
+    name: {{ cookiecutter.app_name }}
+    state: restarted
+  when: {{ cookiecutter.app_name }}_service_state != 'stopped'
+{% endif %}

@@ -1,0 +1,60 @@
+---
+
+## General
+# Version
+{{ cookiecutter.app_name }}_version: 1.0.0
+{{ cookiecutter.app_name }}_release_system: linux_amd64
+
+# Package URL
+{{ cookiecutter.app_name }}_release_name: "exampleapplication_{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_version {% raw %}}}{% endraw %}_{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_release_system {% raw %}}}{% endraw %}"
+{{ cookiecutter.app_name }}_package: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_release_name {% raw %}}}{% endraw %}.tar.gz"
+{{ cookiecutter.app_name }}_url: "https://github.com/someuser/somerepo/releases/download/v{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_version {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package {% raw %}}}{% endraw %}"
+
+# Package paths
+{{ cookiecutter.app_name }}_download_path: /usr/src
+{{ cookiecutter.app_name }}_package_path: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_download_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package {% raw %}}}{% endraw %}"
+{{ cookiecutter.app_name }}_src_bin: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_download_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_release_name {% raw %}}}{% endraw %}/bin/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
+
+# Set true to force the download and installation of the binary
+{{ cookiecutter.app_name }}_force_reinstall: false
+
+# Installation path
+{{ cookiecutter.app_name }}_root_path: /opt/{{ cookiecutter.app_name }}
+{{ cookiecutter.app_name }}_bin_path: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_root_path {% raw %}}}{% endraw %}/bin"
+{{ cookiecutter.app_name }}_skeleton_paths: 
+  - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}"
+{{ cookiecutter.app_name }}_exec_name: {{ cookiecutter.exec_name }}
+{% if cookiecutter.has_service  == 'True' %}
+## Service options
+# Documentation
+{{ cookiecutter.app_name }}_documentation_link: https://www.example.documentation.com
+
+# Owner
+{{ cookiecutter.app_name }}_user: exampleuser
+{{ cookiecutter.app_name }}_group: examplegroup
+
+# Maximum number of files limit
+{{ cookiecutter.app_name }}_max_files: 32768
+
+# Start on boot
+{{ cookiecutter.app_name }}_service_enabled: True
+# Current state: started, stopped
+{{ cookiecutter.app_name }}_service_state: started
+
+# Logs
+# If wanted to output the logs to a file define the following variable
+# More information at https://www.freedesktop.org/software/systemd/man/systemd.exec.html#StandardOutput=
+# {{ cookiecutter.app_name }}_log_file: path_of_the_file
+{{ cookiecutter.app_name }}_log_output: "{% raw %}{%{% endraw %} if {{ cookiecutter.app_name }}_log_file is defined {% raw %}%}{% endraw %} file:{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_file {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %} journal {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}"
+
+# Flags
+{{ cookiecutter.app_name }}_port: # the port exposed by the service goes here 
+{{ cookiecutter.app_name }}_flag1_value: example_value_1
+{{ cookiecutter.app_name }}_flag2_value: example_value_2
+{{ cookiecutter.app_name }}_options:  
+  - "port {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_port {% raw %}}}{% endraw %}"
+  - "flag1 {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_flag1_value {% raw %}}}{% endraw %}"
+  - "flag2 {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_flag2_value {% raw %}}}{% endraw %}"
+
+private_tmp_service: yes
+{% endif %}

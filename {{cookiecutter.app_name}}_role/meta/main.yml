@@ -1,0 +1,18 @@
+---
+
+galaxy_info:
+  author: {{ cookiecutter.author }}
+  company: {{ cookiecutter.company }}
+  description: {{ cookiecutter.app_name | replace('_',' ') | title }} Role
+  min_ansible_version: {{ cookiecutter.min_ansible_version }}
+  license: {{ cookiecutter.license }}
+  galaxy-tags:
+    - {{ cookiecutter.galaxy_tag_1 }}
+    - {{ cookiecutter.galaxy_tag_2 }}
+    - {{ cookiecutter.galaxy_tag_3 }}
+  platforms:
+    - name: Debian
+      versions:
+        {% if cookiecutter.debian_jessie_support == 'True' %}- jessie{% endif %}
+        {% if cookiecutter.debian_stretch_support == 'True' %}- stretch{% endif %}
+        {% if cookiecutter.debian_buster_support == 'True' %}- buster{% endif %}

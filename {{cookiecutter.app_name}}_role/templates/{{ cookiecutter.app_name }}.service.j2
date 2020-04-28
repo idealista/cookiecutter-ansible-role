@@ -1,0 +1,24 @@
+{% raw %}{{ ansible_managed | comment }}{% endraw %}
+[Unit]
+Description={{ cookiecutter.app_name | replace('_',' ') }}
+Documentation={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_documentation_link {% raw %}}}{% endraw %}
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+PrivateTmp={% raw %}{{ private_tmp_service }}{% endraw %}
+User={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}
+Group={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
+RuntimeDirectory={{ cookiecutter.app_name }}
+LimitNOFILE={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_max_files {% raw %}}}{% endraw %}
+
+ExecStart={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} for option in {{ cookiecutter.app_name }}_options {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} if option {% raw %}%}{% endraw %}-{% raw %}{{{% endraw %} option {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+
+StandardOutput={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_output {% raw %}}}{% endraw %}
+StandardError={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_output {% raw %}}}{% endraw %}
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGTERM
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
