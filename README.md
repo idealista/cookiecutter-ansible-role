@@ -2,7 +2,6 @@
 ![Logo](https://raw.githubusercontent.com/idealista/cookiecutter-ansible-role/master/logo.gif)
 
 [![Build Status](https://travis-ci.org/idealista/cookiecutter-ansible-role.png)](https://travis-ci.org/idealista/cookiecutter-ansible-role)
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-idealista.cookiecutter-ansible-role-B62682.svg)](https://galaxy.ansible.com/idealista/cookiecutter-ansible-role)
 
 
 
