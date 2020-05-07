@@ -8,10 +8,10 @@
     - {{ cookiecutter.app_name }}
   become: true
   vars:
-    goss_version: v0.3.10
+    goss_version: v0.3.11
     goss_arch: amd64
     goss_dst: /usr/local/bin/goss
-    goss_sha256sum: 150f25495ca0d1d4fd2ef8d0e750dbd767a15e9a522505f99b61dd1dd40a76d4
+    goss_sha256sum: 7a751c102abac61fd8dff45f87f36c3732cb5158e1414ab78e6877864fc2f7a4
     goss_url: "https://github.com/aelsabbahy/goss/releases/download/{% raw %}{{{% endraw %} goss_version {% raw %}}}{% endraw %}/goss-linux-{% raw %}{{{% endraw %} goss_arch {% raw %}}}{% endraw %}"
     goss_test_directory: /tmp
     goss_format: documentation
