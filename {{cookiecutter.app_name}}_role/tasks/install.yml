@@ -36,7 +36,7 @@
   when: {{ cookiecutter.app_name }}_log_file is defined
 
 - name: {{ cookiecutter.app_name | upper }} | Check {{ cookiecutter.app_name }} version
-  command: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }} --version {% raw %}}}{% endraw %}"
+  command: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %} --version"
   register: {{ cookiecutter.app_name }}_check
   changed_when: false
   ignore_errors: true
