@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Removed
+- *[#9](https://github.com/idealista/cookiecutter-ansible-role/issues/9) Remove Vagrant pattern from role gitignore file* @vicsufer
 
 ### Added
 - *[#4](https://github.com/idealista/cookiecutter-ansible-role/issues/4) Upgrade to Goss v0.3.11* @pablogcaldito
