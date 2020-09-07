@@ -1,0 +1,3 @@
+---
+
+{{ cookiecutter.app_name }}_private_tmp: false
