@@ -56,5 +56,5 @@
   - "flag1 {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_flag1_value {% raw %}}}{% endraw %}"
   - "flag2 {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_flag2_value {% raw %}}}{% endraw %}"
 
-private_tmp_service: yes
+{{ cookiecutter.app_name }}_private_tmp: true
 {% endif %}

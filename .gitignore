@@ -3,7 +3,6 @@ tests/.cache
 __pycache__
 .pytest_cache
 .molecule
-.vagrant
 .cache
 
 *.iml

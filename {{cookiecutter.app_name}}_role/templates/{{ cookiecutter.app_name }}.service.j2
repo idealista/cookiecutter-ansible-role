@@ -6,7 +6,7 @@ Requires=network-online.target
 After=network-online.target
 
 [Service]
-PrivateTmp={% raw %}{{ private_tmp_service }}{% endraw %}
+PrivateTmp={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_private_tmp {% raw %}}}{% endraw %}
 User={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}
 Group={% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
 RuntimeDirectory={{ cookiecutter.app_name }}

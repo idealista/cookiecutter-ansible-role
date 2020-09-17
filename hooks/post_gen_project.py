@@ -22,6 +22,7 @@ def configureRole():
         # Delete the service and things that reference the service
         os.remove("tasks/service.yml")
         os.remove("templates/{{ cookiecutter.app_name }}.service.j2")
+        shutil.rmtree("molecule/default/group_vars")
         # Remove or not the handlers folder
         if not {{ cookiecutter.has_handlers }}:
             shutil.rmtree("handlers")
