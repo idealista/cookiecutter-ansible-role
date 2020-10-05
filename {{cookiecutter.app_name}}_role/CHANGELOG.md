@@ -15,4 +15,4 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
  *[#<issue_number>](https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.app_name }}_role/issues/<issue_number>) \<Change description\>* @\<author\>
 
 ## [1.0.0](https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.app_name }}_role/tree/1.0.0)
-- Inicital release
+- Initial release
