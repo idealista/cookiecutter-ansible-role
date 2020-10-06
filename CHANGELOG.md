@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Removed
+- *[#16](https://github.com/idealista/cookiecutter-ansible-role/issues/16) Remove debian jessie support* @pablogcaldito
+
 ### Added
 - * Add boilerplate README.md* @vicsufer
 

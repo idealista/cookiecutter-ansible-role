@@ -15,7 +15,6 @@
   "galaxy_tag_1":"example_tag1",
   "galaxy_tag_2":"example_tag2",
   "galaxy_tag_3":"example_tag3",
-  "debian_jessie_support":["True", "False"],
   "debian_stretch_support":["True", "False"],
   "debian_buster_support":["True", "False"],
   "has_service":["True", "False"],

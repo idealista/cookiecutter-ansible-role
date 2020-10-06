@@ -56,10 +56,6 @@ license [Apache 2.0]:
 galaxy_tag_1 [example_tag1]: github_cli
 galaxy_tag_2 [example_tag2]: github
 galaxy_tag_3 [example_tag3]: cli
-Select debian_jessie_support:
-1 - True
-2 - False
-Choose from 1, 2 [1]:
 Select debian_stretch_support:
 1 - True
 2 - False

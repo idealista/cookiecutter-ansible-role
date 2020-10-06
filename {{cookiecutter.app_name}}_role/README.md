@@ -6,7 +6,9 @@
 
 
 
-This ansible role installs [{{ cookiecutter.app_name | replace('_',' ') | title }}](APP_URL_HERE) in a Debian environment. It has been tested for Debian buster and stretch.
+This ansible role installs [{{ cookiecutter.app_name | replace('_',' ') | title }}](APP_URL_HERE) in a Debian environment. It has been tested for the following Debian versions:
+{% if cookiecutter.debian_stretch_support == 'True' %}* Stretch{% endif %}
+{% if cookiecutter.debian_buster_support == 'True' %}* Buster{% endif %}
 
 This role has been generated using the [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool, you can generate a similar role that fits your needs using the this [cookiecutter template](https://github.com/idealista/cookiecutter-ansible-role).
 
