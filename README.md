@@ -27,13 +27,11 @@ This cookiecutter:
 
 ### Prerequisities
 
-Cookiecutter version 1.7.x installed.
-
-You can satify this requirement with ```pip install cookiecutter```
+You just need to have pipenv installed.
 
 ## Usage
 
-To generate your ansible role type ```cookiecutter https://github.com/idealista/cookiecutter-ansible-role```.
+To generate your ansible role type ```printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv install -r requirements.txt && pipenv run cookiecutter https://github.com/idealista/cookiecutter-ansible-role && rm Pipfile* requirements.txt```.
 
 Then, introduce some parameters needed for generating it. 
 

@@ -36,7 +36,7 @@ def configureRole():
         os.remove("files/.empty")
 
 def generatePipfile():
-    os.system("pipenv install -r test-requirements.txt --three")
+    print("Now cd into the role directory and introduce the following command for it to be ready: \"pipenv install -r test-requirements.txt --three\"")
 
 def main():
     checkInput()
