@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 - *[#16](https://github.com/idealista/cookiecutter-ansible-role/issues/16) Remove debian jessie support* @pablogcaldito
 
 ### Added
+- *[#15](https://github.com/idealista/cookiecutter-ansible-role/issues/15) Add pipenv wrapper* @pablogcaldito
 - * Add boilerplate README.md* @vicsufer
 
 ## [1.0.1](https://github.com/idealista/cookiecutter-ansible-role/tree/1.0.1) (2020-09-17)
