@@ -9,7 +9,6 @@ install:
   - pip3 install cookiecutter
 env:
   jobs:
-    - MOLECULE_DISTRO=debian:jessie-slim
     - MOLECULE_DISTRO=debian:stretch-slim
     - MOLECULE_DISTRO=debian:buster-slim
     

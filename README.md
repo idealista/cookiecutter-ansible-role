@@ -27,13 +27,11 @@ This cookiecutter:
 
 ### Prerequisities
 
-Cookiecutter version 1.7.x installed.
-
-You can satify this requirement with ```pip install cookiecutter```
+You just need to have [pipenv](https://github.com/pypa/pipenv) installed.
 
 ## Usage
 
-To generate your ansible role type ```cookiecutter https://github.com/idealista/cookiecutter-ansible-role```.
+To generate your ansible role type ```printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv install -r requirements.txt && pipenv run cookiecutter https://github.com/idealista/cookiecutter-ansible-role && rm Pipfile* requirements.txt```.
 
 Then, introduce some parameters needed for generating it. 
 
@@ -56,10 +54,6 @@ license [Apache 2.0]:
 galaxy_tag_1 [example_tag1]: github_cli
 galaxy_tag_2 [example_tag2]: github
 galaxy_tag_3 [example_tag3]: cli
-Select debian_jessie_support:
-1 - True
-2 - False
-Choose from 1, 2 [1]:
 Select debian_stretch_support:
 1 - True
 2 - False
