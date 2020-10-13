@@ -27,7 +27,7 @@ This cookiecutter:
 
 ### Prerequisities
 
-You just need to have pipenv installed.
+You just need to have [pipenv](https://github.com/pypa/pipenv) installed.
 
 ## Usage
 
