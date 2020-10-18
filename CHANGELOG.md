@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+- *[#20](https://github.com/idealista/cookiecutter-ansible-role/issues/20) Add basic configuration in order to enable Probot to delete automatically abandoned PRs/issues* @dortegau
+
+
 ## [2.0.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.0.0) (2020-10-13)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/1.0.1...2.0.0)
 ### Removed
@@ -10,7 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ### Added
 - *[#15](https://github.com/idealista/cookiecutter-ansible-role/issues/15) Add pipenv wrapper* @pablogcaldito
-- * Add boilerplate README.md* @vicsufer
+- *Add boilerplate README.md* @vicsufer
 
 ## [1.0.1](https://github.com/idealista/cookiecutter-ansible-role/tree/1.0.1) (2020-09-17)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/1.0.0...1.0.1)
