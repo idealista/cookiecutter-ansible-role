@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Fixed
+- *[#23](https://github.com/idealista/cookiecutter-ansible-role/issues/23) Change references to branch master to main* @pgomezcaldito
 
 ## [2.1.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.1.0) (2020-10-19)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.0.0...2.1.0)
