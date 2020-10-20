@@ -1,5 +1,5 @@
 # {{ cookiecutter.app_name | replace('_',' ') | title }} Ansible role
-![Logo](https://raw.githubusercontent.com/idealista/{{ cookiecutter.app_name }}_role/master/logo.gif)
+![Logo](logo.gif)
 
 [![Build Status](https://travis-ci.org/idealista/{{ cookiecutter.app_name }}_role.png)](https://travis-ci.org/idealista/{{ cookiecutter.app_name }}_role)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-idealista.{{ cookiecutter.app_name }}_role-B62682.svg)](https://galaxy.ansible.com/idealista/{{ cookiecutter.app_name }}_role)
