@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ### Added
 - *[#20](https://github.com/idealista/cookiecutter-ansible-role/issues/20) Add basic configuration in order to enable Probot to delete automatically abandoned PRs/issues* @dortegau
+### Fixed
+- *[#23](https://github.com/idealista/cookiecutter-ansible-role/issues/23) Change references to branch master to main* @pgomezcaldito
 
 ## [2.0.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.0.0) (2020-10-13)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/1.0.1...2.0.0)
