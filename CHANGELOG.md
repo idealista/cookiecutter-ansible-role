@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ## Unreleased
 
+### Fixed
+- *[#27](https://github.com/idealista/cookiecutter-ansible-role/issues/27) Adding Probot configuration to Ansible Role template* @dortegau
+
+### Changed
+- *[#27](https://github.com/idealista/cookiecutter-ansible-role/issues/27) Increase to 90 days the minimum days to declare a PR/Issue as `staled`* @dortegau
+
+
 ## [2.1.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.1.0) (2020-10-19)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.0.0...2.1.0)
 
