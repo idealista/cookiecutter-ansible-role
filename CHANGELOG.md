@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Changed
 - *[#27](https://github.com/idealista/cookiecutter-ansible-role/issues/27) Increase to 90 days the minimum days to declare a PR/Issue as `staled`* @dortegau
 
+### Removed
+- *[#29](https://github.com/idealista/cookiecutter-ansible-role/issues/29) Removing redudant script in .travis.yml* @xtianae7
 
 ## [2.1.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.1.0) (2020-10-19)
 ## [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.0.0...2.1.0)
