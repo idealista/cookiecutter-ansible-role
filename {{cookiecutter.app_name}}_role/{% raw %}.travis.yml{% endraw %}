@@ -13,7 +13,6 @@ env:
     {% if cookiecutter.debian_stretch_support == 'True' %}- MOLECULE_DISTRO=debian:stretch-slim{% endif %}
     {% if cookiecutter.debian_buster_support == 'True' %}- MOLECULE_DISTRO=debian:buster-slim{% endif %}
 script:
-  - export MOLECULE_DISTRO=${MOLECULE_DISTRO}
   - pipenv run molecule test
 
 notifications:
