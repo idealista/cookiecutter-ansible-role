@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Changed
 - *[#38](https://github.com/idealista/cookiecutter-ansible-role/pull/38) Bump goss version from 0.3.11 to 0.3.14* @vicsufer
 ### Removed
-- *[#39](https://github.com/idealista/cookiecutter-ansible-role/pull/39) Community health files @vicsufer
+- *[#39](https://github.com/idealista/cookiecutter-ansible-role/pull/39) Community health files* @vicsufer
 
 ## [2.1.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.2.0) (2020-11-10)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.1.0...2.2.0)
