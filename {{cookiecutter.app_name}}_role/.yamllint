@@ -3,7 +3,7 @@
 extends: default
 
 ignore: |
-  molecule/default/tests/
+  molecule/**/tests/
 
 rules:
   braces:
