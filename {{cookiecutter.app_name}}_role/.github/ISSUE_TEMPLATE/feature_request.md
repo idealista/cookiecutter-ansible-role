@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG]"
-labels: bug
+name: Feature request
+about: Suggest an idea for this project
+title: "[FEATURE]"
+labels: enhancement
 assignees: ''
 
 ---
@@ -22,27 +22,10 @@ Check that there is not already provided the described functionality
 
 [Description of the issue]
 
-### Steps to Reproduce
+### Why is this needed?
 
-1. [First Step]
-2. [Second Step]
-3. [and so on...]
-
-**Expected behavior:**
-[What you expect to happen]
-
-**Actual behavior:**
-[What actually happens]
-
-**Reproduces how often:** 
-[What percentage of the time does it reproduce?]
-
-### Environment
-
-- The release version/s you are using:
-- OS:
-- Others:
+[A clear and concise description of why do you think this is needed]
 
 ### Additional Information
 
-[Any additional information, configuration or data that might be necessary to reproduce the issue.]
+[Any additional information, configuration or data.]

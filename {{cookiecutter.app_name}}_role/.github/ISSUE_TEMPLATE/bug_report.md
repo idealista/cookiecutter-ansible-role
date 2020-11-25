@@ -39,10 +39,11 @@ Check that there is not already provided the described functionality
 
 ### Environment
 
-- The release version/s you are using:
-- OS:
+- The release version/s you are using: 
+- OS: 
+- Ansible Version: 
+- Python Version:
 - Others:
-
 ### Additional Information
 
 [Any additional information, configuration or data that might be necessary to reproduce the issue.]

@@ -1,8 +1,8 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG]"
-labels: bug
+name: Support Request
+about: Support request or question about this project
+title: "[SUPPORT]"
+labels: question
 assignees: ''
 
 ---
@@ -22,27 +22,6 @@ Check that there is not already provided the described functionality
 
 [Description of the issue]
 
-### Steps to Reproduce
-
-1. [First Step]
-2. [Second Step]
-3. [and so on...]
-
-**Expected behavior:**
-[What you expect to happen]
-
-**Actual behavior:**
-[What actually happens]
-
-**Reproduces how often:** 
-[What percentage of the time does it reproduce?]
-
-### Environment
-
-- The release version/s you are using:
-- OS:
-- Others:
-
 ### Additional Information
 
-[Any additional information, configuration or data that might be necessary to reproduce the issue.]
+Any additional information, configuration or data that might be necessary to reproduce the issue.
