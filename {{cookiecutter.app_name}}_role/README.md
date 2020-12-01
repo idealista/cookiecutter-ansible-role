@@ -32,7 +32,7 @@ Ansible {{ cookiecutter.ansible_version }} version installed.
 
 Molecule 3.x.x version installed.
 
-For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and  [Goss] (https://github.com/aelsabbahy/goss) as verifier.
+For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and [Goss](https://github.com/aelsabbahy/goss) as verifier.
 
 ### Installing
 
@@ -84,7 +84,7 @@ $ pipenv run molecule test
 
 ![Ansible](https://img.shields.io/badge/ansible-{{ cookiecutter.ansible_version }}-green.svg)
 ![Molecule](https://img.shields.io/badge/molecule-{{ cookiecutter.molecule_version }}-green.svg)
-![Goss](https://img.shields.io/badge/goss-0.3.9-green.svg)
+![Goss](https://img.shields.io/badge/goss-0.3.14-green.svg)
 
 ## Versioning
 

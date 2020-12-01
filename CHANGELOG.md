@@ -3,8 +3,23 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+### Fixed
+### Added
+### Changed
+### Removed
 
-## [2.1.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.2.0) (2020-11-10)
+## [2.3.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.3.0)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.2.0...2.3.0)
+### Fixed
+- *[#40](https://github.com/idealista/cookiecutter-ansible-role/issues/40) Updated yamllint configuration* @frantsao
+### Changed
+- *[#38](https://github.com/idealista/cookiecutter-ansible-role/pull/38) Bump goss version from 0.3.11 to 0.3.14* @vicsufer
+- *[#30](https://github.com/idealista/cookiecutter-ansible-role/issues/30) Using a new version for issue template* @xtianae7
+### Removed
+- *[#39](https://github.com/idealista/cookiecutter-ansible-role/pull/39) Community health files* @vicsufer
+- *[#30](https://github.com/idealista/cookiecutter-ansible-role/issues/30) PULL_REQUEST_TEMPLATE removed, replaced with default community health file* @xtianae7
+
+## [2.2.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.2.0) (2020-11-10)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.1.0...2.2.0)
 
 ### Fixed
