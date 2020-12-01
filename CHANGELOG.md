@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Changed
 ### Removed
 
-## [2.3.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.2.0)
+## [2.3.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.3.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.2.0...2.3.0)
 ### Fixed
 - *[#40](https://github.com/idealista/cookiecutter-ansible-role/issues/40) Updated yamllint configuration* @frantsao
