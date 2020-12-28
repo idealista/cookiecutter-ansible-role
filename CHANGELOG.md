@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Fixed
 ### Added
 ### Changed
+- *[#47](https://github.com/idealista/cookiecutter-ansible-role/pull/47) Bump goss version from 0.3.14 to 0.3.16* @vicsufer
 ### Removed
 
 ## [2.3.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.3.0)
