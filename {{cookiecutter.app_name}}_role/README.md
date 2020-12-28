@@ -84,7 +84,7 @@ $ pipenv run molecule test
 
 ![Ansible](https://img.shields.io/badge/ansible-{{ cookiecutter.ansible_version }}-green.svg)
 ![Molecule](https://img.shields.io/badge/molecule-{{ cookiecutter.molecule_version }}-green.svg)
-![Goss](https://img.shields.io/badge/goss-0.3.14-green.svg)
+![Goss](https://img.shields.io/badge/goss-0.3.16-green.svg)
 
 ## Versioning
 
