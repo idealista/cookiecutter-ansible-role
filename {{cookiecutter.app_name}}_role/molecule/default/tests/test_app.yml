@@ -1,36 +1,36 @@
 ---
-
-file:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}:
-  {% if cookiecutter.has_service == 'True' %}
-    owner: {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}
-    group: {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
-  {% endif %}  
-    exists: true
-    filetype: directory
-{% if cookiecutter.has_service == 'True' %}
-# port:
-# # Check port at IPv6
-# # https://github.com/aelsabbahy/goss/issues/177
-#   tcp6:{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_port {% raw %}}}{% endraw %}:
-#     listening: true
-#     ip:
-#     - '::'
-
 service:
   {{ cookiecutter.app_name }}:
     enabled: true
     running: true 
-process:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}:
-    running: true
-user:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}:
-    exists: true
-    groups:
-      - {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
-    shell: /usr/sbin/nologin
-group:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}:
-    exists: true
-{% endif %}
+## Goss Documentation: https://github.com/aelsabbahy/goss/blob/master/docs/manual.md
+## Minimum recommended tests to have in every role
+# process:
+#   exec_name:
+#     running: true
+# user:
+#   example_user:
+#     exists: true
+#     groups:
+#       - example_group
+#     shell: /usr/sbin/nologin
+# group:
+#   example_group:
+#     exists: true
+#
+## Tests to check if the needed directories were created propperly 
+# file:
+#   bin_path:
+#     owner: example_user
+#     group: % example_group
+#     exists: true
+#     filetype: directory
+#
+## Check if ports are really exposed
+# port:
+# # Check port at IPv6
+# # https://github.com/aelsabbahy/goss/issues/177
+#   tcp6:<port>:
+#     listening: true
+#     ip:
+#     - '::'
