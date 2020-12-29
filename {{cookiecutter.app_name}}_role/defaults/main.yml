@@ -27,7 +27,7 @@
 {% if cookiecutter.has_service  == 'True' %}
 ## Service options
 # Documentation
-{{ cookiecutter.app_name }}_documentation_link: https://www.example.documentation.com
+{{ cookiecutter.app_name }}_documentation_link: "{{ cookiecutter.documentation_URL }}"
 
 # Owner
 {{ cookiecutter.app_name }}_user: exampleuser

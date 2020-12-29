@@ -79,6 +79,7 @@ Select has_templates:
 1 - True
 2 - False
 Choose from 1, 2 [1]:
+documentation_URL: https://cli.github.com/manual/
 ```
 
 It will create the following file structure:
