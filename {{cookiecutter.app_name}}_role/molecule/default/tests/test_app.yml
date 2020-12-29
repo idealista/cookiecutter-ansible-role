@@ -4,9 +4,20 @@ service:
   {{ cookiecutter.app_name }}:
     enabled: true
     running: true
+
 process:
   {{ cookiecutter.exec_name }}:
     running: true
+
+user:
+  exampleuser:
+      exists: true
+      groups:
+        - examplegroup
+      shell: /usr/sbin/nologin
+group:
+  examplegroup:
+    exists: true
 {% endif %}
 file:
   /opt/{{ cookiecutter.app_name }}:
@@ -23,17 +34,6 @@ file:
     {% endif %}
     exists: true
     filetype: directory
-{% if cookiecutter.has_service == 'True' %}
-user:
-  exampleuser:
-      exists: true
-      groups:
-        - examplegroup
-      shell: /usr/sbin/nologin
-group:
-  examplegroup:
-    exists: true
-{% endif %}
 
 ## Check if ports are really exposed
 # port:
