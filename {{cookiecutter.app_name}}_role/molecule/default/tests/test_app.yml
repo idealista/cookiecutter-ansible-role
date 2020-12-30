@@ -1,36 +1,46 @@
 ---
-
-file:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}:
-  {% if cookiecutter.has_service == 'True' %}
-    owner: {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}
-    group: {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
-  {% endif %}  
-    exists: true
-    filetype: directory
+## TODO: Remember to adapt goss tests to your convenience
 {% if cookiecutter.has_service == 'True' %}
-# port:
-# # Check port at IPv6
-# # https://github.com/aelsabbahy/goss/issues/177
-#   tcp6:{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_port {% raw %}}}{% endraw %}:
-#     listening: true
-#     ip:
-#     - '::'
-
 service:
   {{ cookiecutter.app_name }}:
     enabled: true
-    running: true 
-process:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}:
     running: true
+
+process:
+  {{ cookiecutter.exec_name }}:
+    running: true
+
 user:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}:
-    exists: true
-    groups:
-      - {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}
-    shell: /usr/sbin/nologin
+  exampleuser:
+      exists: true
+      groups:
+        - examplegroup
+      shell: /usr/sbin/nologin
 group:
-  {% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}:
+  examplegroup:
     exists: true
 {% endif %}
+file:
+  /opt/{{ cookiecutter.app_name }}:
+    {% if cookiecutter.has_service == 'True' %}
+    owner: exampleuser
+    group: examplegroup
+    {% endif %}
+    exists: true
+    filetype: directory
+  /opt/{{ cookiecutter.app_name }}/bin:
+    {% if cookiecutter.has_service == 'True' %}
+    owner: exampleuser
+    group: examplegroup
+    {% endif %}
+    exists: true
+    filetype: directory
+
+## Check if ports are really exposed
+# port:
+# # Check port at IPv6
+# # https://github.com/aelsabbahy/goss/issues/177
+#   tcp6:<port>:
+#     listening: true
+#     ip:
+#     - '::'
