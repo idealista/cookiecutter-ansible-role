@@ -8,6 +8,14 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Changed
 ### Removed
 
+## [2.4.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.4.0)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.3.0...2.4.0)
+### Added
+- *[#45](https://github.com/idealista/cookiecutter-ansible-role/issues/45) Documentation link provided on role generation* @xtianae7
+### Changed
+- *[#47](https://github.com/idealista/cookiecutter-ansible-role/pull/47) Bump goss version from 0.3.14 to 0.3.16* @vicsufer
+- *[#46](https://github.com/idealista/cookiecutter-ansible-role/issues/46) Static tests instead of parameters* @xtianae7
+
 ## [2.3.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.3.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.2.0...2.3.0)
 ### Fixed

@@ -6,7 +6,7 @@
 
 
 
-This ansible role installs [{{ cookiecutter.app_name | replace('_',' ') | title }}](APP_URL_HERE) in a Debian environment. It has been tested for the following Debian versions:
+This ansible role installs {% if cookiecutter.documentation_URL != "" %}[{% endif %}{{ cookiecutter.app_name | replace('_',' ') | title }}{% if cookiecutter.documentation_URL != "" %}]({{ cookiecutter.documentation_URL }}){% endif %} in a Debian environment. It has been tested for the following Debian versions:
 {% if cookiecutter.debian_stretch_support == 'True' %}* Stretch{% endif %}
 {% if cookiecutter.debian_buster_support == 'True' %}* Buster{% endif %}
 
@@ -84,7 +84,7 @@ $ pipenv run molecule test
 
 ![Ansible](https://img.shields.io/badge/ansible-{{ cookiecutter.ansible_version }}-green.svg)
 ![Molecule](https://img.shields.io/badge/molecule-{{ cookiecutter.molecule_version }}-green.svg)
-![Goss](https://img.shields.io/badge/goss-0.3.14-green.svg)
+![Goss](https://img.shields.io/badge/goss-0.3.16-green.svg)
 
 ## Versioning
 
