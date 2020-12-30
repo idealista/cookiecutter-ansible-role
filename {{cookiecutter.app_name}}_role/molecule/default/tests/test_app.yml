@@ -1,5 +1,5 @@
 ---
-## TODO: Remember to adapt goss tests to your convinence
+## TODO: Remember to adapt goss tests to your convenience
 {% if cookiecutter.has_service == 'True' %}
 service:
   {{ cookiecutter.app_name }}:
