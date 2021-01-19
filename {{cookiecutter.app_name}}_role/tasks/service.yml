@@ -8,6 +8,8 @@
     owner: root
     group: root
   notify: restart {{ cookiecutter.app_name }}
+  tags:
+    - {{ cookiecutter.app_name }}_service
 
 - name: {{ cookiecutter.app_name | upper }} | Configuring service
   systemd:
@@ -15,3 +17,5 @@
     state: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_service_state {% raw %}}}{% endraw %}"
     enabled: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_service_enabled {% raw %}}}{% endraw %}"
     daemon_reload: yes
+  tags:
+    - {{ cookiecutter.app_name }}_service

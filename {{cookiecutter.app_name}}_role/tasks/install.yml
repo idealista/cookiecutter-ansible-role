@@ -5,6 +5,8 @@
     name: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
     system: yes
     state: present
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Ensure {{ cookiecutter.app_name }} user
   user:
@@ -13,6 +15,8 @@
     system: yes
     shell: /usr/sbin/nologin
     createhome: no
+  tags:
+    - {{ cookiecutter.app_name }}_install
 {% endif %}
 - name: {{ cookiecutter.app_name | upper }} | Ensure skeleton paths
   file:
@@ -24,6 +28,8 @@
     state: directory
   with_items:
     - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_skeleton_paths {% raw %}}}{% endraw %}"
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Ensure skeleton log paths
   file:
@@ -34,18 +40,24 @@
 {% endif %}
     state: file
   when: {{ cookiecutter.app_name }}_log_file is defined
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Check {{ cookiecutter.app_name }} version
   command: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %} --version"
   register: {{ cookiecutter.app_name }}_check
   changed_when: false
   ignore_errors: true
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Download package
   get_url:
     url: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_url {% raw %}}}{% endraw %}"
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package_path {% raw %}}}{% endraw %}"
   when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Extract downloaded package
   unarchive:
@@ -53,6 +65,8 @@
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_download_path {% raw %}}}{% endraw %}"
     remote_src: True
   when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version  not in {{ cookiecutter.app_name }}_check.stderr
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Copy binary
   copy:
@@ -65,6 +79,8 @@
     remote_src: True
     mode: 0755
   when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  tags:
+    - {{ cookiecutter.app_name }}_install
 
 - name: {{ cookiecutter.app_name | upper }} | Link binary
   file:
@@ -72,3 +88,5 @@
     dest: "/usr/bin/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
     state: link
   when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  tags:
+    - {{ cookiecutter.app_name }}_install
