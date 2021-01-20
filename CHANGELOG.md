@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ## Unreleased
 ### Fixed
+- *[#50](https://github.com/idealista/cookiecutter-ansible-role/issues/50) Tags not applied properly from playbook* @vicsufer
 ### Added
 ### Changed
 ### Removed
