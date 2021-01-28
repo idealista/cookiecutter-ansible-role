@@ -55,7 +55,7 @@
   get_url:
     url: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_url {% raw %}}}{% endraw %}"
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package_path {% raw %}}}{% endraw %}"
-  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stdout
   tags:
     - {{ cookiecutter.app_name }}_install
 
@@ -64,7 +64,7 @@
     src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_package_path {% raw %}}}{% endraw %}"
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_download_path {% raw %}}}{% endraw %}"
     remote_src: True
-  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version  not in {{ cookiecutter.app_name }}_check.stderr
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version  not in {{ cookiecutter.app_name }}_check.stdout
   tags:
     - {{ cookiecutter.app_name }}_install
 
@@ -78,7 +78,7 @@
 {% endif %}
     remote_src: True
     mode: 0755
-  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stdout
   tags:
     - {{ cookiecutter.app_name }}_install
 
@@ -87,6 +87,6 @@
     src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
     dest: "/usr/bin/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
     state: link
-  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
+  when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stdout
   tags:
     - {{ cookiecutter.app_name }}_install
