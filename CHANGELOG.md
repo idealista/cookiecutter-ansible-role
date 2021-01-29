@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Added
 ### Changed
 ### Fixed
+- *[#53](https://github.com/idealista/cookiecutter-ansible-role/issues/53) check app version in stdout instead stderr* @emepege
 ### Removed
 
 ## [2.4.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.4.1)
