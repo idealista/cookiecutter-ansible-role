@@ -8,6 +8,13 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Fixed
 ### Removed
 
+## [2.5.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.5.0)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.4.1...2.5.0)
+### Added
+- *[#57](https://github.com/idealista/cookiecutter-ansible-role/issues/57) Added gitattributes file* @blalop
+### Changed
+- *[#55](https://github.com/idealista/cookiecutter-ansible-role/issues/55) Excluded non-role files from linting* @blalop
+
 ## [2.4.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.4.1)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.4.0...2.4.1)
 ### Fixed
