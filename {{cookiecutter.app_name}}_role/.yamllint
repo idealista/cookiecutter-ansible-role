@@ -4,6 +4,8 @@ extends: default
 
 ignore: |
   molecule/**/tests/
+  .github
+  .travis.yml
 
 rules:
   braces:
