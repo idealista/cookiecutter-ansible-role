@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ## Unreleased
 ### Added
 ### Changed
+- *[#63](https://github.com/idealista/cookiecutter-ansible-role/issues/63) Ignore html in gitattributes file* @blalop
 ### Fixed
 ### Removed
 
