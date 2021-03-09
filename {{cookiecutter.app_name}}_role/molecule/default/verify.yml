@@ -45,6 +45,7 @@
       command: "{% raw %}{{{% endraw %} goss_dst {% raw %}}}{% endraw %} -g {% raw %}{{{% endraw %} item {% raw %}}}{% endraw %} validate --format {% raw %}{{{% endraw %} goss_format {% raw %}}}{% endraw %}"
       register: test_results
       with_items: "{% raw %}{{{% endraw %} test_files.stdout_lines {% raw %}}}{% endraw %}"
+      ignore_errors: true
 
     - name: Display details about the Goss results
       debug:

@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Changed
 - *[#63](https://github.com/idealista/cookiecutter-ansible-role/issues/63) Ignore html in gitattributes file* @blalop
 ### Fixed
+- *[#62](https://github.com/idealista/cookiecutter-ansible-role/issues/62) molecule verify fails and breaks the run when at least one test fail* @ultraheroe
 - *[#60](https://github.com/idealista/cookiecutter-ansible-role/issues/60) [BUG] Wrong state option in "Ensure skeleton log paths" task* @emepege
 ### Removed
 
