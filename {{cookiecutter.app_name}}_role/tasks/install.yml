@@ -38,7 +38,7 @@
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
 {% endif %}
-    state: file
+    state: directory
   when: {{ cookiecutter.app_name }}_log_file is defined
   tags:
     - {{ cookiecutter.app_name }}_install
