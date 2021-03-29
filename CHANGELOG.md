@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ### Added
 ### Changed
 ### Fixed
-- *[#67](https://github.com/idealista/cookiecutter-ansible-role/issues/62) molecule verify fails and breaks the run when at least one test fail* @ultraheroe
+- *[#67](https://github.com/idealista/cookiecutter-ansible-role/issues/67) fix needed task in check_mode- @vicsufer
 ### Removed
 
 ## [2.5.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.5.1)
