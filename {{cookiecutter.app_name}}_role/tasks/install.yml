@@ -48,6 +48,7 @@
   register: {{ cookiecutter.app_name }}_check
   changed_when: false
   ignore_errors: true
+  check_mode: no
   tags:
     - {{ cookiecutter.app_name }}_install
 
