@@ -11,6 +11,12 @@ env:
   jobs:
     - MOLECULE_DISTRO=debian:stretch-slim
     - MOLECULE_DISTRO=debian:buster-slim
-    
 script:
   - ./test.sh
+notifications:
+  email:
+    if: branch = master
+    on_success: change
+    on_failure: always
+    recipients:
+      - desarrollo.benders@idealista.com
