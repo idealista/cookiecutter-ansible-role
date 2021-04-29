@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ## Unreleased
 ### Added
-- *[#69](https://github.com/idealista/cookiecutter-ansible-role/issues/57) Email notifications in travis.* @vicsufer
+- *[#69](https://github.com/idealista/cookiecutter-ansible-role/issues/69) Email notifications in travis.* @vicsufer
 ### Changed
 ### Fixed
 - *[#67](https://github.com/idealista/cookiecutter-ansible-role/issues/67) fix needed task in check_mode- @vicsufer
