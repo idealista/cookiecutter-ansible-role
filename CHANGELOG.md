@@ -3,7 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-
+### Changed
+- *[#73](https://github.com/idealista/cookiecutter-ansible-role/issues/73) Add document start to .yml files* @blalop
 
 ## [2.6.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.6.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.5.1...2.6.0)

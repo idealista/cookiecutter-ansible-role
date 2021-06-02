@@ -21,7 +21,7 @@
 # Installation path
 {{ cookiecutter.app_name }}_root_path: /opt/{{ cookiecutter.app_name }}
 {{ cookiecutter.app_name }}_bin_path: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_root_path {% raw %}}}{% endraw %}/bin"
-{{ cookiecutter.app_name }}_skeleton_paths: 
+{{ cookiecutter.app_name }}_skeleton_paths:
   - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}"
 {{ cookiecutter.app_name }}_exec_name: {{ cookiecutter.exec_name }}
 {% if cookiecutter.has_service  == 'True' %}
