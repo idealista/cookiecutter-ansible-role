@@ -13,7 +13,7 @@
     name: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
     system: yes
-    shell: /usr/sbin/nologin
+    shell: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user_shell {% raw %}}}{% endraw %}"
     createhome: no
   tags:
     - {{ cookiecutter.app_name }}_install
