@@ -32,6 +32,7 @@
 # Owner
 {{ cookiecutter.app_name }}_user: exampleuser
 {{ cookiecutter.app_name }}_group: examplegroup
+{{ cookiecutter.app_name }}_user_shell: /usr/sbin/nologin
 
 # Maximum number of files limit
 {{ cookiecutter.app_name }}_max_files: 32768
