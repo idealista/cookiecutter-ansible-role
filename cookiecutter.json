@@ -10,6 +10,7 @@
   "ansible_version": "",
   "molecule_version": "",
   "python_docker_version": "",
+  "molecule_docker_version": "",
   "ansible_lint_version":"",
   "license":"Apache 2.0",
   "galaxy_tag_1":"example_tag1",
