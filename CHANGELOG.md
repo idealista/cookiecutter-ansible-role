@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- *[#81](https://github.com/idealista/cookiecutter-ansible-role/issues/81) Add log path variable in defaults* @blalop
+
 ## [2.7.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.7.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.6.1...2.7.0)
 ### Added

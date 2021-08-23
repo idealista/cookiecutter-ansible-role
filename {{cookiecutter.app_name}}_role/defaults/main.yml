@@ -45,7 +45,8 @@
 # Logs
 # If wanted to output the logs to a file define the following variable
 # More information at https://www.freedesktop.org/software/systemd/man/systemd.exec.html#StandardOutput=
-# {{ cookiecutter.app_name }}_log_file: path_of_the_file
+# {{ cookiecutter.app_name }}_log_path: /var/log
+# {{ cookiecutter.app_name }}_log_file: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_path {% raw %}}}{% endraw %}/{{ cookiecutter.app_name }}.log"
 {{ cookiecutter.app_name }}_log_output: "{% raw %}{%{% endraw %} if {{ cookiecutter.app_name }}_log_file is defined {% raw %}%}{% endraw %} file:{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_file {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %} journal {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}"
 
 # Flags
