@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ## Unreleased
 ### Added
 - *[#79](https://github.com/idealista/cookiecutter-ansible-role/issues/79) Add molecule-docker support* @blalop
+- *[#79](https://github.com/idealista/cookiecutter-ansible-role/issues/79) Add default versions for Python packages* @blalop
 
 ## [2.7.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.7.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.6.1...2.7.0)
