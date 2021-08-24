@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 - *[#81](https://github.com/idealista/cookiecutter-ansible-role/issues/81) Add log path variable in defaults* @blalop
 - *[#79](https://github.com/idealista/cookiecutter-ansible-role/issues/79) Add molecule-docker support* @blalop
 - *[#79](https://github.com/idealista/cookiecutter-ansible-role/issues/79) Add default versions for Python packages* @blalop
+- *[#83](https://github.com/idealista/cookiecutter-ansible-role/issues/83) Don't leave empty lines when using jinja* @blalop
 
 ## [2.7.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.7.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.6.1...2.7.0)

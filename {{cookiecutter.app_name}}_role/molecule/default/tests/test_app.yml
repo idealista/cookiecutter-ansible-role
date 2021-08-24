@@ -22,17 +22,17 @@ group:
 {% endif %}
 file:
   /opt/{{ cookiecutter.app_name }}:
-    {% if cookiecutter.has_service == 'True' %}
+    {%- if cookiecutter.has_service == 'True' %}
     owner: exampleuser
     group: examplegroup
-    {% endif %}
+    {%- endif %}
     exists: true
     filetype: directory
   /opt/{{ cookiecutter.app_name }}/bin:
-    {% if cookiecutter.has_service == 'True' %}
+    {%- if cookiecutter.has_service == 'True' %}
     owner: exampleuser
     group: examplegroup
-    {% endif %}
+    {%- endif %}
     exists: true
     filetype: directory
 
