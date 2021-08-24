@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+
+## [2.8.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.8.0)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.7.0...2.8.0)
 ### Added
 - *[#81](https://github.com/idealista/cookiecutter-ansible-role/issues/81) Add log path variable in defaults* @blalop
 - *[#79](https://github.com/idealista/cookiecutter-ansible-role/issues/79) Add molecule-docker support* @blalop
