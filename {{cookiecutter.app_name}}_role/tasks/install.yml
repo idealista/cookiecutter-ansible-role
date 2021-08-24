@@ -21,10 +21,10 @@
 - name: {{ cookiecutter.app_name | upper }} | Ensure skeleton paths
   file:
     dest: "{% raw %}{{{% endraw %} item {% raw %}}}{% endraw %}"
-{% if cookiecutter.has_service  == 'True' %}
+{%- if cookiecutter.has_service  == 'True' %}
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
-{% endif %}
+{%- endif %}
     state: directory
   with_items:
     - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_skeleton_paths {% raw %}}}{% endraw %}"
@@ -34,10 +34,10 @@
 - name: {{ cookiecutter.app_name | upper }} | Ensure skeleton log paths
   file:
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_log_path {% raw %}}}{% endraw %}"
-{% if cookiecutter.has_service  == 'True' %}
+{%- if cookiecutter.has_service  == 'True' %}
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
-{% endif %}
+{%- endif %}
     state: directory
   when: {{ cookiecutter.app_name }}_log_file is defined
   tags:
@@ -73,10 +73,10 @@
   copy:
     src: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_src_bin {% raw %}}}{% endraw %}"
     dest: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_bin_path {% raw %}}}{% endraw %}/{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_exec_name {% raw %}}}{% endraw %}"
-{% if cookiecutter.has_service  == 'True' %}
+{%- if cookiecutter.has_service  == 'True' %}
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
-{% endif %}
+{%- endif %}
     remote_src: True
     mode: 0755
   when: {{ cookiecutter.app_name }}_force_reinstall or {{ cookiecutter.app_name }}_check is failed or {{ cookiecutter.app_name }}_version not in {{ cookiecutter.app_name }}_check.stderr
