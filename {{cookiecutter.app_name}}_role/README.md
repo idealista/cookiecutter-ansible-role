@@ -1,7 +1,7 @@
 # {{ cookiecutter.app_name | replace('_',' ') | title }} Ansible role
 ![Logo](logo.gif)
 
-[![Build Status](https://travis-ci.com/idealista/{{ cookiecutter.app_name }}_role.png)](https://travis-ci.com/idealista/{{ cookiecutter.app_name }}_role)
+[![Build Status](https://app.travis-ci.com/idealista/{{ cookiecutter.app_name }}_role.svg)](https://app.travis-ci.com/github/idealista/{{ cookiecutter.app_name }}_role)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-idealista.{{ cookiecutter.app_name }}_role-B62682.svg)](https://galaxy.ansible.com/idealista/{{ cookiecutter.app_name }}_role)
 
 
