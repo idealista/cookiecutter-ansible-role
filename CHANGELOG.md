@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+## [2.8.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.8.1)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.0...2.8.1)
 ### Fixed
 - *[#87](https://github.com/idealista/cookiecutter-ansible-role/issues/87) Travis build image and link are broken in the README template* @emepege
 
