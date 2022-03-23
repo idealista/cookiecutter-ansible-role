@@ -8,5 +8,5 @@ FROM {{ item.image }}
 
 # install minimal packages for debian slim images
 RUN apt-get update && \
-    apt-get install -y python sudo bash ca-certificates iproute2 systemd systemd-sysv python-pip && \
+    apt-get install -y python sudo bash ca-certificates iproute2 systemd systemd-sysv python3-pip && \
     apt-get clean{% endraw %}

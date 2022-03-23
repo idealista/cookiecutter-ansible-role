@@ -16,7 +16,7 @@
   "galaxy_tag_1":"example_tag1",
   "galaxy_tag_2":"example_tag2",
   "galaxy_tag_3":"example_tag3",
-  "debian_stretch_support":["True", "False"],
+  "debian_bullseye_support":["True", "False"],
   "debian_buster_support":["True", "False"],
   "has_service":["True", "False"],
   "has_files":["True", "False"],
