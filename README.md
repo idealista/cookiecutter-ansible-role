@@ -46,10 +46,10 @@ github_user [idealista]:
 company [Idealista S.A.U.]:
 author []: pablogcaldito
 min_ansible_version []: 2.2
-ansible_version []: 2.8.8
+ansible_version []: 5.2.0
 molecule_version []: 3.0.1
 python_docker_version []: 4.1.0
-ansible_lint_version []: 4.2.0
+ansible_lint_version []: 5.3.2
 license [Apache 2.0]:
 galaxy_tag_1 [example_tag1]: github_cli
 galaxy_tag_2 [example_tag2]: github

@@ -25,6 +25,7 @@
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
 {%- endif %}
+    mode: 0755
     state: directory
   with_items:
     - "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_skeleton_paths {% raw %}}}{% endraw %}"
@@ -38,6 +39,7 @@
     owner: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_user {% raw %}}}{% endraw %}"
     group: "{% raw %}{{{% endraw %} {{ cookiecutter.app_name }}_group {% raw %}}}{% endraw %}"
 {%- endif %}
+    mode: 0755
     state: directory
   when: {{ cookiecutter.app_name }}_log_file is defined
   tags:
