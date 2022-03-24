@@ -1,9 +1,7 @@
 # Cookiecutter Ansible Role
 ![Logo](https://raw.githubusercontent.com/idealista/cookiecutter-ansible-role/master/logo.gif)
 
-[![Build Status](https://travis-ci.com/idealista/cookiecutter-ansible-role.png)](https://travis-ci.com/idealista/cookiecutter-ansible-role)
-
-
+[![Build Status](https://travis-ci.org/idealista/cookiecutter-ansible-role.png)](https://travis-ci.com/idealista/cookiecutter-ansible-role)
 
 This cookiecutter generates an [ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html).
 

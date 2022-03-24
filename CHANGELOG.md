@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 ## [2.9.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.9.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.1...2.9.0)
 ### Changed
-- *[#86](https://github.com/idealista/cookiecutter-ansible-role/issues/86) Upgrade molecule config to test under debian bullseye #86* @sperez
+- *[#86](https://github.com/idealista/cookiecutter-ansible-role/issues/86) Upgrade molecule config to test under debian bullseye* @sperez
+- *[#86](https://github.com/idealista/cookiecutter-ansible-role/issues/86) Upgrade ansible to v5.2.0 and ansible lint to v5.3.2 to avoid lint error* @sperez
 ## [2.8.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.8.1)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.0...2.8.1)
 ### Fixed
