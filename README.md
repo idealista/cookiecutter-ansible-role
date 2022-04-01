@@ -1,9 +1,7 @@
 # Cookiecutter Ansible Role
 ![Logo](https://raw.githubusercontent.com/idealista/cookiecutter-ansible-role/master/logo.gif)
 
-[![Build Status](https://travis-ci.com/idealista/cookiecutter-ansible-role.png)](https://travis-ci.com/idealista/cookiecutter-ansible-role)
-
-
+[![Build Status](https://travis-ci.org/idealista/cookiecutter-ansible-role.png)](https://travis-ci.com/idealista/cookiecutter-ansible-role)
 
 This cookiecutter generates an [ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html).
 
@@ -46,15 +44,15 @@ github_user [idealista]:
 company [Idealista S.A.U.]:
 author []: pablogcaldito
 min_ansible_version []: 2.2
-ansible_version []: 2.8.8
+ansible_version []: 5.2.0
 molecule_version []: 3.0.1
 python_docker_version []: 4.1.0
-ansible_lint_version []: 4.2.0
+ansible_lint_version []: 5.3.2
 license [Apache 2.0]:
 galaxy_tag_1 [example_tag1]: github_cli
 galaxy_tag_2 [example_tag2]: github
 galaxy_tag_3 [example_tag3]: cli
-Select debian_stretch_support:
+Select debian_bullseye_support:
 1 - True
 2 - False
 Choose from 1, 2 [1]:

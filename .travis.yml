@@ -1,15 +1,15 @@
 ---
-dist: xenial
+dist: focal
 language: python
 python: "3.9"
 os: linux
 services:
   - docker
 install:
-  - pip3 install cookiecutter
+  - pip install pipenv
 env:
   jobs:
-    - MOLECULE_DISTRO=debian:stretch-slim
+    - MOLECULE_DISTRO=debian:bullseye-slim
     - MOLECULE_DISTRO=debian:buster-slim
 script:
   - ./test.sh

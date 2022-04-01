@@ -8,11 +8,11 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
     exec_name="gh" \
     author="John Doe" \
     min_ansible_version="2.2" \
-    ansible_version="4.4.0" \
+    ansible_version="5.2.0" \
     molecule_version="3.4.0" \
     python_docker_version="5.0.0" \
     molecule_docker_version="0.2.4" \
-    ansible_lint_version="5.1.2" \
+    ansible_lint_version="5.3.2" \
     has_service="False" \
     has_files="False" \
     has_handlers="False" \
@@ -29,7 +29,7 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
     # Launch molecule tests
     pipenv install -r test-requirements.txt --three
     pipenv run molecule test
-    
+
 )
 # Cleanup
 rm -rf github_cli_role
