@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+## [2.9.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.9.0)
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.1...2.9.0)
+### Changed
+- *[#86](https://github.com/idealista/cookiecutter-ansible-role/issues/86) Upgrade molecule config to test under debian bullseye* @santi-eidu
+- *[#86](https://github.com/idealista/cookiecutter-ansible-role/issues/86) Upgrade ansible to v5.2.0 and ansible lint to v5.3.2 to avoid lint error* @santi-eidu
 ## [2.8.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.8.1)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.0...2.8.1)
 ### Fixed

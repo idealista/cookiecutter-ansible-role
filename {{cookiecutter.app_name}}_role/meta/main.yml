@@ -13,5 +13,5 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        {% if cookiecutter.debian_stretch_support == 'True' %}- stretch{% endif %}
+        {% if cookiecutter.debian_bullseye_support == 'True' %}- bullseye{% endif %}
         {% if cookiecutter.debian_buster_support == 'True' %}- buster{% endif %}

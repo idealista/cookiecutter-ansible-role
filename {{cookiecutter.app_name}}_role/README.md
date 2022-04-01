@@ -7,7 +7,7 @@
 
 
 This ansible role installs {% if cookiecutter.documentation_URL != "" %}[{% endif %}{{ cookiecutter.app_name | replace('_',' ') | title }}{% if cookiecutter.documentation_URL != "" %}]({{ cookiecutter.documentation_URL }}){% endif %} in a Debian environment. It has been tested for the following Debian versions:
-{% if cookiecutter.debian_stretch_support == 'True' %}* Stretch{% endif %}
+{% if cookiecutter.debian_bullseye_support == 'True' %}* Bulleye{% endif %}
 {% if cookiecutter.debian_buster_support == 'True' %}* Buster{% endif %}
 
 This role has been generated using the [cookiecutter](https://github.com/cookiecutter/cookiecutter) tool, you can generate a similar role that fits your needs using the this [cookiecutter template](https://github.com/idealista/cookiecutter-ansible-role).

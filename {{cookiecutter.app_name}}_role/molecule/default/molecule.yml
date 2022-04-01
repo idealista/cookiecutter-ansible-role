@@ -10,7 +10,7 @@ platforms:
   - name: {{ cookiecutter.app_name }}
     groups:
       - {{ cookiecutter.app_name }}_group
-    image: ${MOLECULE_DISTRO:-debian:buster-slim}
+    image: ${MOLECULE_DISTRO:-debian:bullseye-slim}
     privileged: false
     capabilities:
       - SYS_ADMIN
