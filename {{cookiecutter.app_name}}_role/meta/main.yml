@@ -6,7 +6,7 @@ galaxy_info:
   description: {{ cookiecutter.app_name | replace('_',' ') | title }} Role
   min_ansible_version: {{ cookiecutter.min_ansible_version }}
   license: {{ cookiecutter.license }}
-  galaxy-tags:
+  galaxy_tags:
     - {{ cookiecutter.galaxy_tag_1 }}
     - {{ cookiecutter.galaxy_tag_2 }}
     - {{ cookiecutter.galaxy_tag_3 }}
