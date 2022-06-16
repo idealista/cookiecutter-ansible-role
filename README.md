@@ -30,7 +30,7 @@ You just need to have [pipenv](https://github.com/pypa/pipenv) installed.
 ## Usage
 
 To generate your ansible role type ```printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv install -r requirements.txt && pipenv run cookiecutter https://github.com/idealista/cookiecutter-ansible-role && rm -rf Pipfile*
-requirements.txt && pipenv --rm```.
+requirements.txt && pipenv --rm && rm -rf requirements.txt```.
 
 Then, introduce some parameters needed for generating it. 
 
