@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## [2.10.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.10.0)
 ### Changed
 - *Improve README init scrips to avoid errors when create two roles on same path because already pipenv exists.* @adrian-arapiles
 - *Change travis.yml order of email notification as documentation explains.* @adrian-arapiles
