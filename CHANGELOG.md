@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+
+## [2.10.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.10.0)
+### Changed
+- *Improve README init scrips to avoid errors when create two roles on same path because already pipenv exists.* @adrian-arapiles
+- *Change travis.yml order of email notification as documentation explains.* @adrian-arapiles
+- *Add first line `---` to ansible-lint file because it's a yml.* @adrian-arapiles 
+### Fixed
+- *[92](https://github.com/idealista/cookiecutter-ansible-role/issues/92) Fix meta.yml lint warning from `galaxy-tags` to `galaxy_tags`.* @adrian-arapiles
+
 ## [2.9.0](https://github.com/idealista/cookiecutter-ansible-role/tree/2.9.0)
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.8.1...2.9.0)
 ### Changed

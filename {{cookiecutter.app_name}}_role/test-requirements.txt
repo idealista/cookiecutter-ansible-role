@@ -3,3 +3,4 @@ molecule=={{ cookiecutter.molecule_version }}
 docker=={{ cookiecutter.python_docker_version }}
 molecule-docker=={{ cookiecutter.molecule_docker_version }}
 ansible-lint=={{ cookiecutter.ansible_lint_version }}
+yamllint=={{ cookiecutter.yamllint_version }}
