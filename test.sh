@@ -13,11 +13,12 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
     python_docker_version="5.0.0" \
     molecule_docker_version="0.2.4" \
     ansible_lint_version="5.3.2" \
+    yamllint_version="1.28.0" \
     has_service="False" \
     has_files="False" \
     has_handlers="False" \
     has_templates="False" \
-    documentation_URL="https://cli.github.com/manual/" && rm Pipfile* requirements.txt
+    documentation_URL="https://cli.github.com/manual/" && rm Pipfile* requirements.txt && rm -rf requirements.txt
 
 (
     # Adjust the role to test
