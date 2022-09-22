@@ -17,7 +17,7 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
     has_files="False" \
     has_handlers="False" \
     has_templates="False" \
-    documentation_URL="https://cli.github.com/manual/" && rm Pipfile* requirements.txt
+    documentation_URL="https://cli.github.com/manual/" && rm Pipfile* requirements.txt && rm -rf requirements.txt
 
 (
     # Adjust the role to test
