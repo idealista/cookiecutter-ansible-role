@@ -46,9 +46,11 @@ company [Idealista S.A.U.]:
 author []: pablogcaldito
 min_ansible_version []: 2.2
 ansible_version []: 5.2.0
-molecule_version []: 3.0.1
-python_docker_version []: 4.1.0
+molecule_version []: 3.4.0
+python_docker_version []: 5.0.0
+molecule_docker_version []: 0.2.4
 ansible_lint_version []: 5.3.2
+yamllint_version []: 1.28.0
 license [Apache 2.0]:
 galaxy_tag_1 [example_tag1]: github_cli
 galaxy_tag_2 [example_tag2]: github
