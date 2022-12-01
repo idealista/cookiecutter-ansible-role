@@ -6,7 +6,7 @@ os: linux
 services:
   - docker
 install:
-  - pip install pipenv
+  - pip install -I pipenv
 env:
   jobs:
     - MOLECULE_DISTRO=debian:bullseye-slim
