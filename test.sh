@@ -28,7 +28,7 @@ printf "cookiecutter==1.7.2\nJinja2==2.11.2" > requirements.txt && pipenv instal
     sed -i 's/1.0.0/0.6.4/g' defaults/main.yml
     sed -i 's/exampleapplication/gh/g' defaults/main.yml
     # Launch molecule tests
-    pipenv install -r test-requirements.txt --three
+    pipenv install -r test-requirements.txt 
     pipenv run molecule test
 
 )
