@@ -39,7 +39,7 @@ file:
 ## Check if ports are really exposed
 # port:
 # # Check port at IPv6
-# # https://github.com/aelsabbahy/goss/issues/177
+# # https://github.com/goss-org/goss/issues/177
 #   tcp6:<port>:
 #     listening: true
 #     ip:

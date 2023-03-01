@@ -12,7 +12,7 @@
     goss_arch: amd64
     goss_dst: /usr/local/bin/goss
     goss_sha256sum: 827e354b48f93bce933f5efcd1f00dc82569c42a179cf2d384b040d8a80bfbfb
-    goss_url: "https://github.com/aelsabbahy/goss/releases/download/{% raw %}{{{% endraw %} goss_version {% raw %}}}{% endraw %}/goss-linux-{% raw %}{{{% endraw %} goss_arch {% raw %}}}{% endraw %}"
+    goss_url: "https://github.com/goss-org/goss/releases/download/{% raw %}{{{% endraw %} goss_version {% raw %}}}{% endraw %}/goss-linux-{% raw %}{{{% endraw %} goss_arch {% raw %}}}{% endraw %}"
     goss_test_directory: /tmp
     goss_format: documentation
 
