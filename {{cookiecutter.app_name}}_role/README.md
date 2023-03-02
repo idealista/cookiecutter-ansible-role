@@ -32,7 +32,7 @@ Ansible {{ cookiecutter.ansible_version }} version installed.
 
 Molecule 3.x.x version installed.
 
-For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and [Goss](https://github.com/aelsabbahy/goss) as verifier.
+For testing purposes, [Molecule](https://molecule.readthedocs.io/) with [Docker](https://www.docker.com/) as driver and [Goss](https://github.com/goss-org/goss) as verifier.
 
 ### Installing
 
