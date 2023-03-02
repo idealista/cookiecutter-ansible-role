@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ## Unreleased
 
+## [2.10.2](https://github.com/idealista/cookiecutter-ansible-role/tree/2.10.2)
+
+### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.10.1...2.10.2)
+
+### Changed
+
+- *[98](https://github.com/idealista/cookiecutter-ansible-role/issues/98)* Change goss URL @Marionv91
+
 ## [2.10.1](https://github.com/idealista/cookiecutter-ansible-role/tree/2.10.)
 
 ### [Full Changelog](https://github.com/idealista/cookiecutter-ansible-role/compare/2.10.0...2.10.1)
